@@ -8,7 +8,11 @@ function UserList() {
   return (
     <ul className="users-list">
       {Users.map((user) => (
-        <User UserName={user["Display name"]} Title={user.Title}></User>
+        <User
+          UserName={user["Display name"]}
+          Title={user.Title}
+          img={user["Display name"]}
+        ></User>
       ))}
     </ul>
   );
