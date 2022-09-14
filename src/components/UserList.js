@@ -1,13 +1,12 @@
 import React from "react";
 import User from "./User";
-import Users from "../data/Users";
 
 import "./UserList.css";
 
-function UserList() {
+function UserList(props) {
   return (
     <ul className="users-list">
-      {Users.map((user) => (
+      {props.items.map((user) => (
         <User
           UserName={user["Display name"]}
           Title={user.Title}

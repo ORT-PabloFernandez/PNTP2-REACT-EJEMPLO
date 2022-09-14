@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./User.css";
 
-function User(props) {
+const User = (props) => {
+  const [count, setCount] = useState(0);
+
+  function HandlerClick_Card(event) {
+    // const userInfoVisitas = event.currentTarget.children[1].children[2];
+    // userInfoVisitas.innerHTML = parseInt(userInfoVisitas.innerHTML) + 1;
+    setCount(count + 1);
+  }
+
   return (
     <li className="user-item" id="1">
       <div className="card user-item__content">
@@ -10,18 +18,14 @@ function User(props) {
             <img src={`./img/${props.img}.jpg`} alt={props.UserName} />
           </div>
           <div className="user-item__info">
+            <h2>{props.UserName}</h2>
             <h2>{props.Title}</h2>
-            <h3>0</h3>
+            <h3>{count}</h3>
           </div>
         </a>
       </div>
     </li>
   );
-}
-
-function HandlerClick_Card(event) {
-  const userInfoVisitas = event.currentTarget.children[1].children[1];
-  userInfoVisitas.innerHTML = parseInt(userInfoVisitas.innerHTML) + 1;
-}
+};
 
 export default User;
