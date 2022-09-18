@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UserList from "./components/UserList";
 //import Users from "./data/Users";
+import Prueba from "./components/Prueba";
 
 import "./App.css";
 
@@ -15,7 +16,8 @@ function App() {
       .then((data) => setUsers(data));
   }, []);
 
-  return <UserList items={users} />;
+  // return <UserList items={users} />;
+  return <Prueba></Prueba>;
 }
 
 export default App;
