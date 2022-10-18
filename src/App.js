@@ -4,6 +4,7 @@ import UserList from "./components/UserList";
 import Prueba from "./components/Prueba";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NewUserP from "./user/pages/NewUserP";
+import LoginP from "./user/pages/LoginP";
 import Users from "./user/pages/Users";
 
 import "./App.css";
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path="/users/newuser" exact>
           <NewUserP></NewUserP>
+        </Route>
+        <Route path="/users/login" exact>
+          <LoginP></LoginP>
         </Route>
       </Switch>
     </Router>
